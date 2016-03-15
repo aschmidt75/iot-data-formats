@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.cassini.de/iot/1" xmlns="http://www.cassini.de/iot/1" elementFormDefault="qualified">
+
+<xs:complexType name="definitionType">
+  <xs:attribute name="id" type="xs:string" use="required"/>
+  <xs:attribute name="category" type="xs:string" use="required"/>
+  <xs:attribute name="unit" type="xs:string" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="entryType">
+  <xs:attribute name="defId" type="xs:string" use="required"/>
+  <xs:attribute name="value" type="xs:string" use="required"/>
+  <xs:attribute name="ts" type="xs:unsignedInt" use="optional"/>
+</xs:complexType>
+
+<xs:complexType name="definitionsType">
+  <xs:choice minOccurs="1" maxOccurs="unbounded">
+    <xs:element name="definition" type="definitionType"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="entriesType">
+  <xs:choice minOccurs="1" maxOccurs="unbounded">
+    <xs:element name="entry" type="entryType"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:element name="device-data-update">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="definitions" type="definitionsType"/>
+      <xs:element name="entries" type="entriesType"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

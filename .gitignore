@@ -1,0 +1,11 @@
+exi/bundle/
+exi/src/
+exi/com/
+*.jar
+*.mp
+*.cbor
+*.pb2
+*.bson
+*.exi
+*.pyc
+testschema_pb2.py

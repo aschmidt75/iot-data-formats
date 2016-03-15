@@ -1,0 +1,27 @@
+{
+  "device-data-update": {
+    "definitions": {
+      "tempc": {
+        "category": "Temperature",
+        "unit": "celsius"
+      },
+      "hum": {
+        "category": "RelativeHumidity",
+        "unit": "percent"
+      }
+    },
+    "entries": [
+      { "defId": "tempc", "value": "17.1", "ts": "1457696012" },
+      { "defId": "hum", "value": "66", "ts": "1457696012" },
+      { "defId": "tempc", "value": "18.3", "ts": "1457696022" },
+      { "defId": "hum", "value": "62", "ts": "1457696022" },
+      { "defId": "tempc", "value": "14.1", "ts": "1457696032" },
+      { "defId": "hum", "value": "63", "ts": "1457696032" },
+      { "defId": "tempc", "value": "12.9", "ts": "1457696042" },
+      { "defId": "hum", "value": "66", "ts": "1457696042" },
+      { "defId": "tempc", "value": "10.6", "ts": "1457696052" },
+      { "defId": "hum", "value": "68", "ts": "1457696052" }
+
+    ]
+  }
+}

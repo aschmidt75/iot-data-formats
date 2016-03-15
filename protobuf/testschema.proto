@@ -1,0 +1,21 @@
+package iot1;
+
+message DeviceDataUpdate {
+
+  message Definition {
+    required string id = 1;
+    required string category = 2;
+    required string unit = 3;
+  }
+
+  repeated Definition definition = 1;
+
+  message Entry {
+    required string defId = 1;
+    required string value = 2;
+    optional string ts = 3;
+  }
+
+  repeated Entry entry = 2;
+
+}
